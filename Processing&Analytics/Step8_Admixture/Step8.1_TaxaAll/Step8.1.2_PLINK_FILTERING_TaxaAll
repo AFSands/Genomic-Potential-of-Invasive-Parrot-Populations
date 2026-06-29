@@ -1,0 +1,29 @@
+#################################################
+# NOTES: This script was run in an interactive node. The inputs are taken from Step8.1.1.
+#################################################
+
+module load plink/1.90b7.7
+
+#Group1
+plink --tfile InvasiveTaxaAll_G1 --make-bed --allow-extra-chr --missing --recode --out InvasiveTaxaAll_G1 #SNPs 8,307,243
+plink --bfile InvasiveTaxaAll_G1 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveTaxaAll_G1
+plink --bfile InvasiveTaxaAll_G1 --allow-extra-chr --extract InvasiveTaxaAll_G1.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveTaxaAll_G1_LDprune  
+plink --bfile InvasiveTaxaAll_G1_LDprune --allow-extra-chr --recode vcf --out InvasiveTaxaAll_G1_LDprune_Admix #SNPs 776,349
+
+#Group2
+plink --tfile InvasiveTaxaAll_G2 --make-bed --allow-extra-chr --missing --recode --out InvasiveTaxaAll_G2 #SNPs 8,485,116
+plink --bfile InvasiveTaxaAll_G2 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveTaxaAll_G2
+plink --bfile InvasiveTaxaAll_G2 --allow-extra-chr --extract InvasiveTaxaAll_G2.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveTaxaAll_G2_LDprune  
+plink --bfile InvasiveTaxaAll_G2_LDprune --allow-extra-chr --recode vcf --out InvasiveTaxaAll_G2_LDprune_Admix #SNPs 794,270
+
+#Group3
+plink --tfile InvasiveTaxaAll_G3 --make-bed --allow-extra-chr --missing --recode --out InvasiveTaxaAll_G3 #SNPs 8,455,062
+plink --bfile InvasiveTaxaAll_G3 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveTaxaAll_G3
+plink --bfile InvasiveTaxaAll_G3 --allow-extra-chr --extract InvasiveTaxaAll_G3.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveTaxaAll_G3_LDprune  
+plink --bfile InvasiveTaxaAll_G3_LDprune --allow-extra-chr --recode vcf --out InvasiveTaxaAll_G3_LDprune_Admix #SNPs 777,726
+
+#Group4
+plink --tfile InvasiveTaxaAll_G4 --make-bed --allow-extra-chr --missing --recode --out InvasiveTaxaAll_G4 #SNPs 8,313,147
+plink --bfile InvasiveTaxaAll_G4 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveTaxaAll_G4
+plink --bfile InvasiveTaxaAll_G4 --allow-extra-chr --extract InvasiveTaxaAll_G4.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveTaxaAll_G4_LDprune  
+plink --bfile InvasiveTaxaAll_G4_LDprune --allow-extra-chr --recode vcf --out InvasiveTaxaAll_G4_LDprune_Admix #SNPs 765,455
