@@ -1,5 +1,5 @@
 #################################################
-# NOTES: This script requires the support file "CBRlist".
+# NOTES: This script requires the support files "CBRlist" and "chromosome_map".
 #################################################
 
 #!/bin/bash -l
