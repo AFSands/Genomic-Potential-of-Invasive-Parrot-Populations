@@ -1,5 +1,5 @@
 #################################################
-# NOTES: This script requires the support file "PERlist".
+# NOTES: This script requires the support files "PERlist" and "chromosome_map".
 #################################################
 
 #!/bin/bash -l
