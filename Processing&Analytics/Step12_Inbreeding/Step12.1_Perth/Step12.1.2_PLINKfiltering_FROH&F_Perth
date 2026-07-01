@@ -1,0 +1,16 @@
+#################################################
+# NOTES: This script was run in an interactive node. The inputs are taken from Step12.1.1.
+#################################################
+
+module load plink/1.90b7.7
+
+#LD pruning
+plink --tfile InvROH_2 --make-bed --allow-extra-chr --missing --recode --out InvROH_2 #SNPs 1,093,564
+plink --bfile InvROH_2 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvROH_2
+plink --bfile InvROH_2 --allow-extra-chr --extract InvROH_2.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvROH_2_LDprune  
+
+#ROH/HET
+plink --bfile InvROH_2_LDprune --allow-extra-chr --het --homozyg-kb 100 --homozyg-window-snp 25 --homozyg-window-threshold 0.05 --homozyg-window-het 2 --homozyg-density 50 --homozyg-window-missing 5 --homozyg-het 750 --out InvROH_2_LDprune_ROH #SNPs 66,883
+
+#CurrentNe
+plink --bfile InvROH_2_LDprune --allow-extra-chr --recode vcf --out InvROH_2_LDprune_currentNe #SNPs 66,883
