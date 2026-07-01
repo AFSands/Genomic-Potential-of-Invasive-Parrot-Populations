@@ -1,0 +1,7 @@
+#################################################
+# NOTES: The inputs are taken from Step11.2. This script was run in an interactive node to convert the VCF to a FASTA file. It requires a support Python script "vcf2phylip.py" 
+#################################################
+
+module load biopythontools
+
+python vcf2phylip.py --input Invasion5xinterphylo_12_ldprune_IQTreeBEAST.vcf --fasta --min-samples-locus 118
