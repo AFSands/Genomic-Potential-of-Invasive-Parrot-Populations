@@ -1,4 +1,4 @@
-Lifelines or liabilities: The genomic potential of invasive parrots to supplement dwindling native populations
+THE GENOMIC POTENTIAL OF INVASIVE PARROTS TO SUPPLEMENT DWINDLING NATIVE POPULATIONS
 
 Arthur F. Sands 1 2, Astrid A.L. Andersson 1, Geraldine W.X. Lee 2, Taylor Hains 3 4, Kerry Reid 1, Leo Joseph 5, Caroline Dingle 1 6, Frank E. Rheindt 2, Juha Merilä 1 7
 
