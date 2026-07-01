@@ -1,0 +1,17 @@
+#################################################
+# NOTES: This script was run in an interactive node. The inputs are taken from Step10.1.1.
+#################################################
+
+#Load Plik 1.90
+module load plink/1.90
+
+#LD Pruning
+plink --tfile Invasive_18 --make-bed --allow-extra-chr --missing --recode --out Invasive_18 #SNPs 23,888
+plink --bfile Invasive_18 --allow-extra-chr --indep-pairwise 50 5 0.2 --out Invasive_18
+plink --bfile Invasive_18 --allow-extra-chr --extract Invasive_18.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out Invasive_18_ldprune_PCA #SNPs 16,253
+
+#Load plink 2
+module load plink
+
+#PCA
+plink2 --bfile Invasive_18_ldprune_PCA --pca 10 --allow-extra-chr --bad-freqs --out Invasive_18_ldprune_PCA #SNPs 16,253
