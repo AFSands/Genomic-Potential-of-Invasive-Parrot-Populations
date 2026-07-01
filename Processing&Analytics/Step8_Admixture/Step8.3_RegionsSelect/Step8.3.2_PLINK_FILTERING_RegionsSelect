@@ -1,0 +1,33 @@
+#################################################
+# NOTES: This script was run in an interactive node. The inputs are taken from Step8.3.1.
+#################################################
+
+module load plink/1.90b7.7
+
+#Group1
+plink --tfile InvasiveRegions_Select_G1 --make-bed --allow-extra-chr --missing --recode --out InvasiveRegions_Select_G1 #SNPs 3,574,385 
+plink --bfile InvasiveRegions_Select_G1 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveRegions_Select_G1
+plink --bfile InvasiveRegions_Select_G1 --allow-extra-chr --extract InvasiveRegions_Select_G1.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveRegions_Select_G1_LDprune  
+plink --bfile InvasiveRegions_Select_G1_LDprune --allow-extra-chr --recode vcf --out InvasiveRegions_Select_G1_LDprune_Admix #SNPs 643,877 
+sed -i 's/^SUPER_//' InvasiveRegions_Select_G1_LDprune.bim
+
+#Group2
+plink --tfile InvasiveRegions_Select_G2 --make-bed --allow-extra-chr --missing --recode --out InvasiveRegions_Select_G2 #SNPs 3,647,345 
+plink --bfile InvasiveRegions_Select_G2 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveRegions_Select_G2
+plink --bfile InvasiveRegions_Select_G2 --allow-extra-chr --extract InvasiveRegions_Select_G2.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveRegions_Select_G2_LDprune  
+plink --bfile InvasiveRegions_Select_G2_LDprune --allow-extra-chr --recode vcf --out InvasiveRegions_Select_G2_LDprune_Admix #SNPs 652,765
+sed -i 's/^SUPER_//' InvasiveRegions_Select_G2_LDprune.bim
+
+#Group3
+plink --tfile InvasiveRegions_Select_G3 --make-bed --allow-extra-chr --missing --recode --out InvasiveRegions_Select_G3 #SNPs 3,649,995
+plink --bfile InvasiveRegions_Select_G3 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveRegions_Select_G3
+plink --bfile InvasiveRegions_Select_G3 --allow-extra-chr --extract InvasiveRegions_Select_G3.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveRegions_Select_G3_LDprune  
+plink --bfile InvasiveRegions_Select_G3_LDprune --allow-extra-chr --recode vcf --out InvasiveRegions_Select_G3_LDprune_Admix #SNPs 628,538
+sed -i 's/^SUPER_//' InvasiveRegions_Select_G3_LDprune.bim
+
+#Group4
+plink --tfile InvasiveRegions_Select_G4 --make-bed --allow-extra-chr --missing --recode --out InvasiveRegions_Select_G4 #SNPs 3,582,438
+plink --bfile InvasiveRegions_Select_G4 --allow-extra-chr --indep-pairwise 50 5 0.2 --out InvasiveRegions_Select_G4
+plink --bfile InvasiveRegions_Select_G4 --allow-extra-chr --extract InvasiveRegions_Select_G4.prune.in --make-bed --distance triangle ibs 1-ibs allele-ct --out InvasiveRegions_Select_G4_LDprune  
+plink --bfile InvasiveRegions_Select_G4_LDprune --allow-extra-chr --recode vcf --out InvasiveRegions_Select_G4_LDprune_Admix #SNPs 622,082
+sed -i 's/^SUPER_//' InvasiveRegions_Select_G4_LDprune.bim
