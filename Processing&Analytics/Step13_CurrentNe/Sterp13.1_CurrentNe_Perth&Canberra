@@ -1,0 +1,19 @@
+#################################################
+# NOTES: This script was run in an interactive node. The VCF inputs were taken from Step12.1.2 & Step12.2.2.
+#################################################
+
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_k0 -k 0 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_k05 -k 0.5 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_k1 -k 1 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_k15 -k 1.5 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_k2 -k 2 InvROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o InvROH_2_LDprune_currentNe2_x -x InvROH_2_LDprune_currentNe.vcf 39
+
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_k0 -k 0 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_k05 -k 0.5 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_k1 -k 1 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_k15 -k 1.5 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_k2 -k 2 CanROH_2_LDprune_currentNe.vcf 39
+/projappl/project_2006079/currentNe2/currentne2 -o CanROH_2_LDprune_currentNe2_x -x CanROH_2_LDprune_currentNe.vcf 39
