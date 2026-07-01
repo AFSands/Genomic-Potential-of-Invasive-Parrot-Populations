@@ -14,7 +14,7 @@ Corresponding author: sands@hku.hk / sands@nus.edu.sg
 
 This repository contains the scripts and support files for the above-mentioned paper. Queries related to scripts and provided files may be directed to the corresponding author. 
 
-Results derived herein for Cacatua galerita were compared to those provided/shared by Andersson et al 2026 for Cacatua sulphurea (see: https://doi.org/10.1111/eva.70245).
+Scripts and files shared herein only reflect those for newly generated results for invasive Cacatua galerita from Perth and surroundings. Results from Hong Kong Cacatua sulphurea, used for comparison, were provided/shared by Andersson et al (2026; https://doi.org/10.1111/eva.70245) - see that paper for further information on their scripts and results.
 
 ######################## Processing & Analytics ######################## 
 Processing batch and R scripts, along with support files, for specific analyses can be found in the "Processing&Analytics" directory. 
