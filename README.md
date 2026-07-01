@@ -16,12 +16,12 @@ This repository contains the scripts and support files for the above-mentioned p
 
 ######################## Processing & Analytics ######################## 
 Processing batch and R scripts, along with support files, for specific analyses can be found in the "Processing&Analytics" directory. 
-These scripts and support file examples have been categorised and labelled in the order in which they took place from Step1-x. 
+These scripts and support file examples have been categorised and labelled in the order in which they took place from Step1-13. 
 For the most part, the scripts are shown with pathways, input file names and output names exactly how they were run on the high-performance 
 computer Puhti (CSC, Finland) or on the authors' personal computers. Where the same script was repeated multiple times for different samples, 
 the scripts have been provided in a generic format, with pathways, input file names and output names requiring specification. Notes have been 
 given at the top of each script (where required) to provide basic instructions or further information.
 
 ################## Data files & raw results ################### 
-Basic starting files and raw/preliminary results may be found on the Dryad Digital Repository ().
+Basic starting files (if not given) and raw/preliminary results may be found on the Dryad Digital Repository ().
 
