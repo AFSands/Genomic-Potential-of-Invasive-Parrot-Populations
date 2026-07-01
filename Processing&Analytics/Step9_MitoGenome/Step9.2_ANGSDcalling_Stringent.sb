@@ -1,0 +1,36 @@
+#################################################
+# NOTES: This script is run from the final output of Step4.2
+#################################################
+
+#!/bin/bash -l
+#SBATCH --job-name=AngsdmtDNA_S
+#SBATCH --error=%j.err
+#SBATCH --output=%j.out
+#SBATCH --account=project_2006079
+#SBATCH --partition=small
+#SBATCH --time=72:00:00
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=8G
+
+module load angsd
+
+#stringent genotype likelihood estimation
+angsd -P 12 -out ANWCB37588H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB37588/ANWCB37588_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB37589H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB37589/ANWCB37589_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB37590H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB37590/ANWCB37590_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38022H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38022/ANWCB38022_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38023H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38023/ANWCB38023_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38024H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38024/ANWCB38024_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38025H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38025/ANWCB38025_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38026H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38026/ANWCB38026_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38027H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38027/ANWCB38027_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38028H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38028/ANWCB38028_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38530H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38530/ANWCB38530_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out ANWCB38531H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/ANWCB38531/ANWCB38531_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out WAMA34109H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/WAMA34109/WAMA34109_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+angsd -P 12 -out WAMA34963H -i /scratch/project_2006079/aDNA/step6_MapDamage/withF4flag/galerita_mitogeno/WAMA34963/WAMA34963_PE_ME_merged_sort_RG_resort_Mkdup_sort_rescaled_finalsort.bam -doFasta 2 -doCounts 1 -trim 2 -minQ 35 -minMapQ 50
+
+chmod -R 777 *
+gzip -d *.gz
+chmod -R 777 *
